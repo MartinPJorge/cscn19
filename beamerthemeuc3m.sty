@@ -1,0 +1,34 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+\useinnertheme{uc3m}
+\useoutertheme{uc3m}
+\usecolortheme{uc3m}
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]  
+\setbeamertemplate{footline}{%
+    \vspace{-2em}
+    \ifnum\thepage>1\relax%
+    \hfill
+    \color{uc3mblue}
+    \insertframenumber/\inserttotalframenumber 
+    \hspace{1em}
+    \vspace{0.5em}
+   \fi
+}
+
+
+\setbeamertemplate{section page}{
+  \begin{tikzpicture}
+      \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+      \fill[color=uc3mblue] (-1,0) rectangle (\the\paperwidth,\the\paperheight+2);
+      \node[align=center, left] at (current page.center) {\usebeamerfont{title} \color{white} \insertsectionhead};
+  \end{tikzpicture}
+}
+
+\mode<all>

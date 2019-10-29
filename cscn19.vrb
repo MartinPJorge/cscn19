@@ -1,0 +1,14 @@
+\frametitle{More functionalities}
+Fog nodes generation inside an area
+
+    \begin{lstlisting}[language=R]
+graph <- attachFogNodes(..., numNodes = 100,
+                        latB = plazaNuevaLatB,
+                        latT = plazaNuevaLatT,
+                        lonL = plazaNuevaLonL,
+                        lonR = plazaNuevaLonR, ...)\end{lstlisting}
+    Other methods:
+    \begin{itemize}
+        \item Modify/add graph nodes (e.g., swithes or servers) properties: \emph{addNodeProps()}; and
+        \item Modify/add graph links (e.g., fiber) properties: \emph{addLinkProps()}.
+    \end{itemize}
